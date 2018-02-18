@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_recycler_and_swipe_refresh"
+            android:icon="@drawable/ic_format_list_bulleted_black_24dp"
+            android:title="@string/nav_recycler_view" />
+        <item
+            android:id="@+id/nav_scrolling"
+            android:icon="@drawable/ic_file_download_black_24dp"
+            android:title="@string/nav_scrolling" />
+        <item
+            android:id="@+id/nav_full_screen"
+            android:icon="@drawable/ic_fullscreen_black_24dp"
+            android:title="@string/nav_fullscreen" />
+        <item
+            android:id="@+id/nav_bottom_navigation"
+            android:icon="@drawable/ic_more_horiz_black_24dp"
+            android:title="@string/nav_bottom_navigation" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="@string/nav_settings" />
+    </group>
+
+    <group android:id="@+id/group_about">
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_info_black_24dp"
+            android:title="@string/nav_about" />
+        <item
+            android:id="@+id/nav_donate"
+            android:icon="@drawable/ic_monetization_on_black_24dp"
+            android:title="@string/nav_donate" />
+    </group>
+
+    <item android:title="@string/nav_my_apps">
+        <menu>
+            <item
+                android:id="@+id/nav_color"
+                android:icon="@drawable/material_design_color"
+                android:title="@string/nav_color" />
+        </menu>
+    </item>
+
+</menu>
