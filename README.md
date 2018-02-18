@@ -11,7 +11,3 @@ MaterialDesign Xamarin.Android Demo
 ![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/2.png)
 
 ![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/3.png)
-
-![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/pad_1.png)
-
-![image](https://github.com/Eajy/MaterialDesignDemo/blob/master/pictures/pad_2.png)
