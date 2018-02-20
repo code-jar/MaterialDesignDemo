@@ -129,32 +129,29 @@ namespace MaterialDesign.Class.fragment
                     horizontalProgressDialog.Max = 100;
                     horizontalProgressDialog.Show();
 
-                    Task.Run(() =>
+                    new System.Threading.Thread(() =>
                     {
-                        new Java.Lang.Runnable(() =>
+
+                        int progress = 0;
+                        while (progress <= 100)
                         {
-
-                            int progress = 0;
-                            while (progress <= 100)
+                            horizontalProgressDialog.Progress = progress;
+                            if (progress == 100)
                             {
-                                horizontalProgressDialog.Progress = progress;
-                                if (progress == 100)
-                                {
-                                    horizontalProgressDialog.Dismiss();
-                                }
-                                try
-                                {
-                                    Task.Delay(35);
-                                }
-                                catch (Exception e)
-                                {
-                                    throw e;
-                                }
-                                progress++;
+                                horizontalProgressDialog.Dismiss();
                             }
+                            try
+                            {
+                                System.Threading.Thread.Sleep(35);
+                            }
+                            catch (Exception e)
+                            {
+                                throw e;
+                            }
+                            progress++;
+                        }
 
-                        }).Run();
-                    });
+                    }).Start();
                     #endregion
                     break;
                 case Resource.Id.btn_dialog_7:
