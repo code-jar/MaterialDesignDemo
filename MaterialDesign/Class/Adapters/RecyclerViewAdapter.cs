@@ -38,7 +38,7 @@ namespace MaterialDesign.Class.Adapters
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
-            if (Utils.ObjectUtility.CheckInherit(holder.GetType(), typeof(RecyclerViewHolder)))
+            if (holder is RecyclerViewHolder)
             {
                 RecyclerViewHolder recyclerViewHolder = (RecyclerViewHolder)holder;
                 Android.Views.Animations.Animation animation = AnimationUtils.LoadAnimation(context, Resource.Animation.anim_recycler_item_show);

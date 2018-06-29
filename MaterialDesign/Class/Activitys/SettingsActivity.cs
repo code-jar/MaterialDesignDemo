@@ -25,15 +25,15 @@ namespace MaterialDesign.Class.Activitys
         {
             string stringValue = newValue.ToString();
 
-            if (Utils.ObjectUtility.CheckInherit(preference.GetType(), typeof(ListPreference)))
+            if (preference is ListPreference)
             {
-                ListPreference listPreference = (ListPreference)preference;
+                ListPreference listPreference = preference as ListPreference;
                 int index = listPreference.FindIndexOfValue(stringValue);
 
                 // Set the summary to reflect the new value.
                 preference.Summary = index >= 0 ? listPreference.GetEntries()[index] : null;
             }
-            else if (Utils.ObjectUtility.CheckInherit(preference.GetType(), typeof(RingtonePreference)))
+            else if (preference is RingtonePreference)
             {
                 if (Android.Text.TextUtils.IsEmpty(stringValue))
                 {

@@ -27,7 +27,7 @@ namespace MaterialDesign.Class.Views
         public override int GetMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder)
         {
             //Instances
-            if (ObjectUtility.CheckInherit(recyclerView.GetLayoutManager().GetType(), typeof(GridLayoutManager)))
+            if (recyclerView.GetLayoutManager() is GridLayoutManager)
             {
                 // for recyclerView with gridLayoutManager, support drag all directions, not support swipe
                 int dragFlags = ItemTouchHelper.Up | ItemTouchHelper.Down | ItemTouchHelper.Left | ItemTouchHelper.Right;
